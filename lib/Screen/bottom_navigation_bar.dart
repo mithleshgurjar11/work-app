@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:property_buy_seller/Screen/postproparty1.dart';
 
+import '../home_page.dart';
 import 'add_property.dart';
 import 'home.dart';
 import 'profile.dart';
@@ -17,6 +18,7 @@ class bottom_avigationar extends StatefulWidget {
 class _bottom_avigationarState extends State<bottom_avigationar> {
   int _selectedIndex = 0;
   static const List<Widget> _pages = <Widget>[
+    HomePage(),
     Home(),
    // ADS(),
    // PostProparty1(),
@@ -59,24 +61,24 @@ class _bottom_avigationarState extends State<bottom_avigationar> {
             label: 'Home',
             // backgroundColor: colors.Appbar,
           ),
-          // BottomNavigationBarItem(
-          //   icon: Container(
-          //     decoration: BoxDecoration(
-          //         borderRadius: BorderRadius.circular(100.0),
-          //         border: Border.all(
-          //             width: 1,
-          //             color: _selectedIndex == 1
-          //                 ? colors.secondary
-          //                 : colors.whitebase)),
-          //     child: CircleAvatar(
-          //       foregroundColor: Colors.white,
-          //       backgroundColor: Colors.black,
-          //       child: ImageIcon(AssetImage("assets/images/a.png")),
-          //     ),
-          //   ),
-          //   label: 'Ads',
-          //   // backgroundColor: colors.Appbar,
-          // ),
+          BottomNavigationBarItem(
+            icon: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100.0),
+                  border: Border.all(
+                      width: 1,
+                      color: _selectedIndex == 1
+                          ? colors.secondary
+                          : colors.whitebase)),
+              child: CircleAvatar(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.black,
+                child: ImageIcon(AssetImage("assets/images/locations.png",)),
+              ),
+            ),
+            label: 'nearby',
+            // backgroundColor: colors.Appbar,
+          ),
           BottomNavigationBarItem(
             icon: Container(
               decoration: BoxDecoration(
